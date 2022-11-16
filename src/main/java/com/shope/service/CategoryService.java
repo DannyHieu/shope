@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import com.shope.model.Category;
 import com.shope.repository.CategoryRepository;
+import com.shope.utils.GenerateAlphaNumberString;
 
 
 
@@ -18,6 +19,7 @@ public class CategoryService {
 	
 	public List<Category> getAllCategory() {
 		List<Category> list =  categoryRepo.findAll();
+		System.out.println(GenerateAlphaNumberString.getAlphaNumericString(6));
 		return list;
 	}
 
